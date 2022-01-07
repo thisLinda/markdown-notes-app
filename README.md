@@ -1,3 +1,10 @@
+# A Few Notes About the Project
+An instructional project from the Scrimba React course.
+
+I chose to recreate in Visual Studio Code rather than complete in the Scrimba editor for future reference in GitHub.
+
+One dependency, `react-split-pane` is no longer being maintained. I searched the NPM error message and found this discussion https://github.com/netlify/netlify-cms/issues/5376 and added the files into my project. This was new learning for me as well as using polyfill.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
