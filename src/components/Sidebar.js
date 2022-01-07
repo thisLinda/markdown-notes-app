@@ -10,7 +10,9 @@ export default function Sidebar(props) {
                 }`}
                 onClick={() => props.setCurrentNoteId(note.id)}
             >
-                <h4 className="text-snippet">Note {index + 1}</h4>
+            {/* js split used to preview the note in sidebar */}
+            {/* access to note above in map, note.body is the string, split returns an array at the index of 0 */}
+                <h4 className="text-snippet">{note.body.split("\n")[0]}</h4>
             </div>
         </div>
     ))
