@@ -13,7 +13,8 @@ export default function App() {
      * FYI, if localStorage finds nothing at that key it comes back as null
      */
     const [notes, setNotes] = React.useState(
-        JSON.parse(localStorage.getItem("notes")) || []
+        // anonymous function at the beginning of the call implicitly returns and results in lazy initialization (without it the app would initialize each time the notes change/will only reach into local storage the first time the app runs)
+        () => JSON.parse(localStorage.getItem("notes")) || []
     )
     const [currentNoteId, setCurrentNoteId] = React.useState(
         (notes[0] && notes[0].id) || ""
