@@ -7,20 +7,28 @@ import {nanoid} from "nanoid"
 
 export default function App() {
     /**
-     * Challenge:
-     * 1. Every time the `notes` array changes, save it 
-     *    in localStorage. You'll need to use JSON.stringify()
-     *    to turn the array into a string to save in localStorage.
-     * 2. When the app first loads, initialize the notes state
-     *    with the notes saved in localStorage. You'll need to
-     *    use JSON.parse() to turn the stringified array back
-     *    into a real JS array.
+     * to use the localStorage created below to get notes
+     * set initial state by accessing `localStorage.get` and getting the item with key of notes
+     * because it will be coming back as a stringified value need to parse
+     * FYI, if localStorage finds nothing at that key it comes back as null
      */
-    
-    const [notes, setNotes] = React.useState(/*Your code here*/[])
+    const [notes, setNotes] = React.useState(
+        JSON.parse(localStorage.getItem("notes")) || []
+    )
     const [currentNoteId, setCurrentNoteId] = React.useState(
         (notes[0] && notes[0].id) || ""
     )
+
+    /**
+     * To interact with localStorage every time the notes array changes need to set up a sideEffect in react with useEffect()
+     * useEffect takes 2 parameters, a function and an array
+     * the effect will run every time notes changes so notes array is second parameter
+     * every time notes changes use `localStorage.setItem()` --using the notes key inside localStorage-- --> `localStorage.setItem("notes")` and use .JSON.stringify to stringify the notes so that the array can be changed to a string and saved in local storage
+     */
+
+    React.useEffect(() => {
+        localStorage.setItem("notes", JSON.stringify(notes))
+    }, [notes])
     
     function createNewNote() {
         const newNote = {

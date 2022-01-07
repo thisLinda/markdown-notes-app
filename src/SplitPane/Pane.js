@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import stylePropType from 'react-style-proptype';
+import stylePropType from 'react-style-proptype';
 
 class Pane extends React.PureComponent {
   render() {
@@ -46,7 +46,7 @@ Pane.propTypes = {
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   split: PropTypes.oneOf(['vertical', 'horizontal']),
-  // style: stylePropType,
+  style: stylePropType,
   eleRef: PropTypes.func,
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import stylePropType from 'react-style-proptype';
+import stylePropType from 'react-style-proptype';
 import { polyfill } from 'react-lifecycles-compat';
 
 import Pane from './Pane';
@@ -349,33 +349,33 @@ class SplitPane extends React.Component {
   }
 }
 
-// SplitPane.propTypes = {
-//   allowResize: PropTypes.bool,
-//   children: PropTypes.arrayOf(PropTypes.node).isRequired,
-//   className: PropTypes.string,
-//   primary: PropTypes.oneOf(['first', 'second']),
-//   minSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-//   maxSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-//   // eslint-disable-next-line react/no-unused-prop-types
-//   defaultSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-//   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-//   split: PropTypes.oneOf(['vertical', 'horizontal']),
-//   onDragStarted: PropTypes.func,
-//   onDragFinished: PropTypes.func,
-//   onChange: PropTypes.func,
-//   onResizerClick: PropTypes.func,
-//   onResizerDoubleClick: PropTypes.func,
-//   style: stylePropType,
-//   resizerStyle: stylePropType,
-//   paneClassName: PropTypes.string,
-//   pane1ClassName: PropTypes.string,
-//   pane2ClassName: PropTypes.string,
-//   paneStyle: stylePropType,
-//   pane1Style: stylePropType,
-//   pane2Style: stylePropType,
-//   resizerClassName: PropTypes.string,
-//   step: PropTypes.number,
-// };
+SplitPane.propTypes = {
+  allowResize: PropTypes.bool,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  className: PropTypes.string,
+  primary: PropTypes.oneOf(['first', 'second']),
+  minSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  maxSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  // eslint-disable-next-line react/no-unused-prop-types
+  defaultSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  split: PropTypes.oneOf(['vertical', 'horizontal']),
+  onDragStarted: PropTypes.func,
+  onDragFinished: PropTypes.func,
+  onChange: PropTypes.func,
+  onResizerClick: PropTypes.func,
+  onResizerDoubleClick: PropTypes.func,
+  style: stylePropType,
+  resizerStyle: stylePropType,
+  paneClassName: PropTypes.string,
+  pane1ClassName: PropTypes.string,
+  pane2ClassName: PropTypes.string,
+  paneStyle: stylePropType,
+  pane1Style: stylePropType,
+  pane2Style: stylePropType,
+  resizerClassName: PropTypes.string,
+  step: PropTypes.number,
+};
 
 SplitPane.defaultProps = {
   allowResize: true,
