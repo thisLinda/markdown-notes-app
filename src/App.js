@@ -60,7 +60,7 @@ export default function App() {
             notes.length > 0 
             ?
             <SplitPane 
-                sizes={[30, 70]} 
+                sizes={[50, 50]} 
                 direction="horizontal" 
                 className="split"
             >

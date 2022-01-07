@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
+// import stylePropType from 'react-style-proptype';
 import { polyfill } from 'react-lifecycles-compat';
 
 import Pane from './Pane';
@@ -266,7 +266,7 @@ class SplitPane extends React.Component {
       display: 'flex',
       flex: 1,
       height: '100%',
-      position: 'absolute',
+      // position: 'absolute',
       outline: 'none',
       overflow: 'hidden',
       MozUserSelect: 'text',
@@ -365,21 +365,21 @@ SplitPane.propTypes = {
   onChange: PropTypes.func,
   onResizerClick: PropTypes.func,
   onResizerDoubleClick: PropTypes.func,
-  style: stylePropType,
-  resizerStyle: stylePropType,
+  // style: stylePropType,
+  // resizerStyle: stylePropType,
   paneClassName: PropTypes.string,
   pane1ClassName: PropTypes.string,
   pane2ClassName: PropTypes.string,
-  paneStyle: stylePropType,
-  pane1Style: stylePropType,
-  pane2Style: stylePropType,
+  // paneStyle: stylePropType,
+  // pane1Style: stylePropType,
+  // pane2Style: stylePropType,
   resizerClassName: PropTypes.string,
   step: PropTypes.number,
 };
 
 SplitPane.defaultProps = {
   allowResize: true,
-  minSize: 50,
+  minSize: 240,
   primary: 'first',
   split: 'vertical',
   paneClassName: '',

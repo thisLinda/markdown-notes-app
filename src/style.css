@@ -3,12 +3,13 @@
 }
 
 body {
-    /* no change increasing margin */
     margin: 0;
-    /* increasing padding from 0 showed second vertical slider on right */
-    padding: 100;
+    padding: 0;
     font-family: 'Karla', sans-serif;
-    background-color: pink;
+    background: rgba(231, 71, 19, 1.0);
+    background: -webkit-linear-gradient(top left, rgba(231, 71, 19, 1.0), rgba(172, 195, 135, 1.0));
+    background: -moz-linear-gradient(top left, rgba(231, 71, 19, 1.0), rgba(172, 195, 135, 1.0));
+    background: linear-gradient(to bottom right, rgba(231, 71, 19, 1.0), rgba(172, 195, 135, 1.0));
 }
 
 button:focus {
@@ -22,18 +23,11 @@ button:focus {
 }
 
 .pane {
-    /* overflow-y auto adds scrollbar when needed */
-    /* adding margin not helpful */
     overflow-y: auto;
     padding: 10px;
-    /* margin-left: 10px; */
-    background-color: yellow;
 }
 
 .sidebar {
-    /* no change with adding margin or padding
-    margin: 50px;
-    padding: 50px; */
     width: 50%;
     height: 100vh;
 }
@@ -60,6 +54,7 @@ button:focus {
     border-radius: 3px;
     height: 30px;
     width: 30px;
+    /* margin-left: 10px; */
 }
 
 .first-note {
@@ -72,7 +67,7 @@ button:focus {
 }
 
 .editor {
-    width: 50%;
+    width: 100%;
     height: 100vh;
 }
 
@@ -122,7 +117,6 @@ button:focus {
 
 .gutter {
     background-color: #eee;
-
     background-repeat: no-repeat;
     background-position: 50%;
 }
